@@ -1,0 +1,195 @@
+<IPKISSNETLIST name="MZModulatorDefault">
+<NETLIST cell="MZModulatorDefault" view="netlist">
+<NETLISTINSTANCE name="combiner" reference="MMI_1X2_OPTIMIZED_1550" />
+<NETLISTINSTANCE name="h1" reference="MZModulatorDefault_heater" />
+<NETLISTINSTANCE name="h1_in_to_sbend1_out" reference="MZModulatorDefault_h1_in_to_sbend1_out" />
+<NETLISTINSTANCE name="h1_out_to_tm1out_in" reference="MZModulatorDefault_h1_out_to_tm1out_in" />
+<NETLISTINSTANCE name="h2" reference="MZModulatorDefault_heater" />
+<NETLISTINSTANCE name="h2_in_to_sbend2_out" reference="MZModulatorDefault_h2_in_to_sbend2_out" />
+<NETLISTINSTANCE name="h2_out_to_tm2out_in" reference="MZModulatorDefault_h2_out_to_tm2out_in" />
+<NETLISTINSTANCE name="hub" reference="PCELL_1" />
+<NETLISTINSTANCE name="modulator1" reference="MZModulatorDefaultmod" />
+<NETLISTINSTANCE name="modulator2" reference="MZModulatorDefaultmod" />
+<NETLISTINSTANCE name="sbend1" reference="MZModulatorDefault_sbend1" />
+<NETLISTINSTANCE name="sbend2" reference="MZModulatorDefault_sbend2" />
+<NETLISTINSTANCE name="splitter" reference="MMI_1X2_OPTIMIZED_1550" />
+<NETLISTINSTANCE name="tm1in" reference="MZModulatorDefault_taper" />
+<NETLISTINSTANCE name="tm1in_in_to_splitter_out1" reference="MZModulatorDefault_tm1in_in_to_splitter_out1" />
+<NETLISTINSTANCE name="tm1out" reference="MZModulatorDefault_taper" />
+<NETLISTINSTANCE name="tm2in" reference="MZModulatorDefault_taper" />
+<NETLISTINSTANCE name="tm2in_in_to_splitter_out2" reference="MZModulatorDefault_tm2in_in_to_splitter_out2" />
+<NETLISTINSTANCE name="tm2out" reference="MZModulatorDefault_taper" />
+<TERM name="G1_pad" domain="ElectricalDomain" />
+<TERM name="G2_pad" domain="ElectricalDomain" />
+<TERM name="G3_pad" domain="ElectricalDomain" />
+<TERM name="H1_pad" domain="ElectricalDomain" />
+<TERM name="H2_pad" domain="ElectricalDomain" />
+<TERM name="SL_pad" domain="ElectricalDomain" />
+<TERM name="SR_pad" domain="ElectricalDomain" />
+<TERM name="ele1" domain="ElectricalDomain" />
+<TERM name="ele2" domain="ElectricalDomain" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="G1_pad_hub:G1_pad" domain="ElectricalDomain" n_terms="2" terms="G1_pad, hub:G1_pad" />
+<NET name="G2_pad_hub:G2_pad" domain="ElectricalDomain" n_terms="2" terms="G2_pad, hub:G2_pad" />
+<NET name="G3_pad_hub:G3_pad" domain="ElectricalDomain" n_terms="2" terms="G3_pad, hub:G3_pad" />
+<NET name="H1_pad_hub:H1_pad" domain="ElectricalDomain" n_terms="2" terms="H1_pad, hub:H1_pad" />
+<NET name="H2_pad_hub:H2_pad" domain="ElectricalDomain" n_terms="2" terms="H2_pad, hub:H2_pad" />
+<NET name="SL_pad_hub:SL_pad" domain="ElectricalDomain" n_terms="2" terms="SL_pad, hub:SL_pad" />
+<NET name="SR_pad_hub:SR_pad" domain="ElectricalDomain" n_terms="2" terms="SR_pad, hub:SR_pad" />
+<NET name="ele1-h1:elec1" domain="ElectricalDomain" n_terms="2" terms="ele1, h1:elec1" />
+<NET name="ele2-h2:elec1" domain="ElectricalDomain" n_terms="2" terms="ele2, h2:elec1" />
+<NET name="h1:elec2_hub:h1_elec2" domain="ElectricalDomain" n_terms="2" terms="h1:elec2, hub:h1_elec2" />
+<NET name="h2:elec2_hub:h2_elec2" domain="ElectricalDomain" n_terms="2" terms="h2:elec2, hub:h2_elec2" />
+<NET name="modulator1:anode_hub:pmod1_anode" domain="ElectricalDomain" n_terms="2" terms="modulator1:anode, hub:pmod1_anode" />
+<NET name="modulator1:cathode_hub:pmod1_cathode" domain="ElectricalDomain" n_terms="2" terms="modulator1:cathode, hub:pmod1_cathode" />
+<NET name="modulator2:anode_hub:pmod2_anode" domain="ElectricalDomain" n_terms="2" terms="modulator2:anode, hub:pmod2_anode" />
+<NET name="modulator2:cathode_hub:pmod2_cathode" domain="ElectricalDomain" n_terms="2" terms="modulator2:cathode, hub:pmod2_cathode" />
+<NET name="combiner:in1-out" domain="OpticalDomain" n_terms="2" terms="out, combiner:in1" />
+<NET name="combiner:out1-sbend1:in" domain="OpticalDomain" n_terms="2" terms="combiner:out1, sbend1:in" />
+<NET name="combiner:out2-sbend2:in" domain="OpticalDomain" n_terms="2" terms="combiner:out2, sbend2:in" />
+<NET name="h1:in-h1_in_to_sbend1_out:in" domain="OpticalDomain" n_terms="2" terms="h1:in, h1_in_to_sbend1_out:in" />
+<NET name="h1:out-h1_out_to_tm1out_in:in" domain="OpticalDomain" n_terms="2" terms="h1:out, h1_out_to_tm1out_in:in" />
+<NET name="h1_in_to_sbend1_out:out-sbend1:out" domain="OpticalDomain" n_terms="2" terms="h1_in_to_sbend1_out:out, sbend1:out" />
+<NET name="h1_out_to_tm1out_in:out-tm1out:in" domain="OpticalDomain" n_terms="2" terms="h1_out_to_tm1out_in:out, tm1out:in" />
+<NET name="h2:in-h2_in_to_sbend2_out:in" domain="OpticalDomain" n_terms="2" terms="h2:in, h2_in_to_sbend2_out:in" />
+<NET name="h2:out-h2_out_to_tm2out_in:in" domain="OpticalDomain" n_terms="2" terms="h2:out, h2_out_to_tm2out_in:in" />
+<NET name="h2_in_to_sbend2_out:out-sbend2:out" domain="OpticalDomain" n_terms="2" terms="h2_in_to_sbend2_out:out, sbend2:out" />
+<NET name="h2_out_to_tm2out_in:out-tm2out:in" domain="OpticalDomain" n_terms="2" terms="h2_out_to_tm2out_in:out, tm2out:in" />
+<NET name="in-splitter:in1" domain="OpticalDomain" n_terms="2" terms="in, splitter:in1" />
+<NET name="modulator1:in-tm1in:out" domain="OpticalDomain" n_terms="2" terms="modulator1:in, tm1in:out" />
+<NET name="modulator1:out-tm1out:out" domain="OpticalDomain" n_terms="2" terms="modulator1:out, tm1out:out" />
+<NET name="modulator2:in-tm2in:out" domain="OpticalDomain" n_terms="2" terms="modulator2:in, tm2in:out" />
+<NET name="modulator2:out-tm2out:out" domain="OpticalDomain" n_terms="2" terms="modulator2:out, tm2out:out" />
+<NET name="splitter:out1-tm1in_in_to_splitter_out1:out" domain="OpticalDomain" n_terms="2" terms="splitter:out1, tm1in_in_to_splitter_out1:out" />
+<NET name="splitter:out2-tm2in_in_to_splitter_out2:out" domain="OpticalDomain" n_terms="2" terms="splitter:out2, tm2in_in_to_splitter_out2:out" />
+<NET name="tm1in:in-tm1in_in_to_splitter_out1:in" domain="OpticalDomain" n_terms="2" terms="tm1in:in, tm1in_in_to_splitter_out1:in" />
+<NET name="tm2in:in-tm2in_in_to_splitter_out2:in" domain="OpticalDomain" n_terms="2" terms="tm2in:in, tm2in_in_to_splitter_out2:in" />
+</NETLIST>
+<NETLIST cell="MMI_1X2_OPTIMIZED_1550" view="netlist">
+<MODALTERM name="in1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out2" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_h1_in_to_sbend1_out" view="netlist">
+<NETLISTINSTANCE name="contents" reference="MZModulatorDefault_h1_in_to_sbend1_out_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_h1_in_to_sbend1_out_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_h1_out_to_tm1out_in" view="netlist">
+<NETLISTINSTANCE name="contents" reference="MZModulatorDefault_h1_out_to_tm1out_in_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_h1_out_to_tm1out_in_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_h2_in_to_sbend2_out" view="netlist">
+<NETLISTINSTANCE name="contents" reference="MZModulatorDefault_h2_in_to_sbend2_out_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_h2_in_to_sbend2_out_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_h2_out_to_tm2out_in" view="netlist">
+<NETLISTINSTANCE name="contents" reference="MZModulatorDefault_h2_out_to_tm2out_in_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_h2_out_to_tm2out_in_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_heater" view="netlist">
+<TERM name="elec1" domain="ElectricalDomain" />
+<TERM name="elec2" domain="ElectricalDomain" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_sbend1" view="netlist">
+<NETLISTINSTANCE name="contents" reference="MZModulatorDefault_sbend1_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_sbend1_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_sbend2" view="netlist">
+<NETLISTINSTANCE name="contents" reference="MZModulatorDefault_sbend2_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_sbend2_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_taper" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_tm1in_in_to_splitter_out1" view="netlist">
+<NETLISTINSTANCE name="contents" reference="MZModulatorDefault_tm1in_in_to_splitter_out1_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_tm1in_in_to_splitter_out1_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_tm2in_in_to_splitter_out2" view="netlist">
+<NETLISTINSTANCE name="contents" reference="MZModulatorDefault_tm2in_in_to_splitter_out2_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefault_tm2in_in_to_splitter_out2_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="MZModulatorDefaultmod" view="netlist">
+<TERM name="anode" domain="ElectricalDomain" />
+<TERM name="cathode" domain="ElectricalDomain" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="PCELL_1" view="netlist">
+<TERM name="G1_pad" domain="ElectricalDomain" />
+<TERM name="G2_pad" domain="ElectricalDomain" />
+<TERM name="G3_pad" domain="ElectricalDomain" />
+<TERM name="H1_pad" domain="ElectricalDomain" />
+<TERM name="H2_pad" domain="ElectricalDomain" />
+<TERM name="SL_pad" domain="ElectricalDomain" />
+<TERM name="SR_pad" domain="ElectricalDomain" />
+<TERM name="h1_elec1" domain="ElectricalDomain" />
+<TERM name="h1_elec2" domain="ElectricalDomain" />
+<TERM name="h2_elec1" domain="ElectricalDomain" />
+<TERM name="h2_elec2" domain="ElectricalDomain" />
+<TERM name="pmod1_anode" domain="ElectricalDomain" />
+<TERM name="pmod1_cathode" domain="ElectricalDomain" />
+<TERM name="pmod2_anode" domain="ElectricalDomain" />
+<TERM name="pmod2_cathode" domain="ElectricalDomain" />
+</NETLIST>
+</IPKISSNETLIST>

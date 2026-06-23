@@ -1,0 +1,118 @@
+<IPKISSNETLIST name="SplitterTreeDefault">
+<NETLIST cell="SplitterTreeDefault" view="netlist">
+<NETLISTINSTANCE name="sp_0_0" reference="MMI_1X2_OPTIMIZED_1550" />
+<NETLISTINSTANCE name="sp_0_0_out1_to_sp_1_0_in1" reference="SplitterTreeDefault_sp_0_0_out1_to_sp_1_0_in1" />
+<NETLISTINSTANCE name="sp_0_0_out2_to_sp_1_1_in1" reference="SplitterTreeDefault_sp_0_0_out2_to_sp_1_1_in1" />
+<NETLISTINSTANCE name="sp_1_0" reference="MMI_1X2_OPTIMIZED_1550" />
+<NETLISTINSTANCE name="sp_1_0_out1_to_sp_2_0_in1" reference="SplitterTreeDefault_sp_1_0_out1_to_sp_2_0_in1" />
+<NETLISTINSTANCE name="sp_1_0_out2_to_sp_2_1_in1" reference="SplitterTreeDefault_sp_1_0_out2_to_sp_2_1_in1" />
+<NETLISTINSTANCE name="sp_1_1" reference="MMI_1X2_OPTIMIZED_1550" />
+<NETLISTINSTANCE name="sp_1_1_out1_to_sp_2_2_in1" reference="SplitterTreeDefault_sp_1_1_out1_to_sp_2_2_in1" />
+<NETLISTINSTANCE name="sp_1_1_out2_to_sp_2_3_in1" reference="SplitterTreeDefault_sp_1_1_out2_to_sp_2_3_in1" />
+<NETLISTINSTANCE name="sp_2_0" reference="MMI_1X2_OPTIMIZED_1550" />
+<NETLISTINSTANCE name="sp_2_1" reference="MMI_1X2_OPTIMIZED_1550" />
+<NETLISTINSTANCE name="sp_2_2" reference="MMI_1X2_OPTIMIZED_1550" />
+<NETLISTINSTANCE name="sp_2_3" reference="MMI_1X2_OPTIMIZED_1550" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out2" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out3" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out4" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out5" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out6" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out7" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out8" domain="OpticalDomain" n_modes="1" />
+<NET name="in-sp_0_0:in1" domain="OpticalDomain" n_terms="2" terms="in, sp_0_0:in1" />
+<NET name="out1-sp_2_0:out1" domain="OpticalDomain" n_terms="2" terms="out1, sp_2_0:out1" />
+<NET name="out2-sp_2_0:out2" domain="OpticalDomain" n_terms="2" terms="out2, sp_2_0:out2" />
+<NET name="out3-sp_2_1:out1" domain="OpticalDomain" n_terms="2" terms="out3, sp_2_1:out1" />
+<NET name="out4-sp_2_1:out2" domain="OpticalDomain" n_terms="2" terms="out4, sp_2_1:out2" />
+<NET name="out5-sp_2_2:out1" domain="OpticalDomain" n_terms="2" terms="out5, sp_2_2:out1" />
+<NET name="out6-sp_2_2:out2" domain="OpticalDomain" n_terms="2" terms="out6, sp_2_2:out2" />
+<NET name="out7-sp_2_3:out1" domain="OpticalDomain" n_terms="2" terms="out7, sp_2_3:out1" />
+<NET name="out8-sp_2_3:out2" domain="OpticalDomain" n_terms="2" terms="out8, sp_2_3:out2" />
+<NET name="sp_0_0:out1-sp_0_0_out1_to_sp_1_0_in1:in" domain="OpticalDomain" n_terms="2" terms="sp_0_0:out1, sp_0_0_out1_to_sp_1_0_in1:in" />
+<NET name="sp_0_0:out2-sp_0_0_out2_to_sp_1_1_in1:in" domain="OpticalDomain" n_terms="2" terms="sp_0_0:out2, sp_0_0_out2_to_sp_1_1_in1:in" />
+<NET name="sp_0_0_out1_to_sp_1_0_in1:out-sp_1_0:in1" domain="OpticalDomain" n_terms="2" terms="sp_0_0_out1_to_sp_1_0_in1:out, sp_1_0:in1" />
+<NET name="sp_0_0_out2_to_sp_1_1_in1:out-sp_1_1:in1" domain="OpticalDomain" n_terms="2" terms="sp_0_0_out2_to_sp_1_1_in1:out, sp_1_1:in1" />
+<NET name="sp_1_0:out1-sp_1_0_out1_to_sp_2_0_in1:in" domain="OpticalDomain" n_terms="2" terms="sp_1_0:out1, sp_1_0_out1_to_sp_2_0_in1:in" />
+<NET name="sp_1_0:out2-sp_1_0_out2_to_sp_2_1_in1:in" domain="OpticalDomain" n_terms="2" terms="sp_1_0:out2, sp_1_0_out2_to_sp_2_1_in1:in" />
+<NET name="sp_1_0_out1_to_sp_2_0_in1:out-sp_2_0:in1" domain="OpticalDomain" n_terms="2" terms="sp_1_0_out1_to_sp_2_0_in1:out, sp_2_0:in1" />
+<NET name="sp_1_0_out2_to_sp_2_1_in1:out-sp_2_1:in1" domain="OpticalDomain" n_terms="2" terms="sp_1_0_out2_to_sp_2_1_in1:out, sp_2_1:in1" />
+<NET name="sp_1_1:out1-sp_1_1_out1_to_sp_2_2_in1:in" domain="OpticalDomain" n_terms="2" terms="sp_1_1:out1, sp_1_1_out1_to_sp_2_2_in1:in" />
+<NET name="sp_1_1:out2-sp_1_1_out2_to_sp_2_3_in1:in" domain="OpticalDomain" n_terms="2" terms="sp_1_1:out2, sp_1_1_out2_to_sp_2_3_in1:in" />
+<NET name="sp_1_1_out1_to_sp_2_2_in1:out-sp_2_2:in1" domain="OpticalDomain" n_terms="2" terms="sp_1_1_out1_to_sp_2_2_in1:out, sp_2_2:in1" />
+<NET name="sp_1_1_out2_to_sp_2_3_in1:out-sp_2_3:in1" domain="OpticalDomain" n_terms="2" terms="sp_1_1_out2_to_sp_2_3_in1:out, sp_2_3:in1" />
+</NETLIST>
+<NETLIST cell="MMI_1X2_OPTIMIZED_1550" view="netlist">
+<MODALTERM name="in1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out2" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="SplitterTreeDefault_sp_0_0_out1_to_sp_1_0_in1" view="netlist">
+<NETLISTINSTANCE name="contents" reference="SplitterTreeDefault_sp_0_0_out1_to_sp_1_0_in1_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="SplitterTreeDefault_sp_0_0_out1_to_sp_1_0_in1_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="SplitterTreeDefault_sp_0_0_out2_to_sp_1_1_in1" view="netlist">
+<NETLISTINSTANCE name="contents" reference="SplitterTreeDefault_sp_0_0_out2_to_sp_1_1_in1_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="SplitterTreeDefault_sp_0_0_out2_to_sp_1_1_in1_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="SplitterTreeDefault_sp_1_0_out1_to_sp_2_0_in1" view="netlist">
+<NETLISTINSTANCE name="contents" reference="SplitterTreeDefault_sp_1_0_out1_to_sp_2_0_in1_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="SplitterTreeDefault_sp_1_0_out1_to_sp_2_0_in1_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="SplitterTreeDefault_sp_1_0_out2_to_sp_2_1_in1" view="netlist">
+<NETLISTINSTANCE name="contents" reference="SplitterTreeDefault_sp_1_0_out2_to_sp_2_1_in1_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="SplitterTreeDefault_sp_1_0_out2_to_sp_2_1_in1_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="SplitterTreeDefault_sp_1_1_out1_to_sp_2_2_in1" view="netlist">
+<NETLISTINSTANCE name="contents" reference="SplitterTreeDefault_sp_1_1_out1_to_sp_2_2_in1_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="SplitterTreeDefault_sp_1_1_out1_to_sp_2_2_in1_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="SplitterTreeDefault_sp_1_1_out2_to_sp_2_3_in1" view="netlist">
+<NETLISTINSTANCE name="contents" reference="SplitterTreeDefault_sp_1_1_out2_to_sp_2_3_in1_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="SplitterTreeDefault_sp_1_1_out2_to_sp_2_3_in1_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+</IPKISSNETLIST>

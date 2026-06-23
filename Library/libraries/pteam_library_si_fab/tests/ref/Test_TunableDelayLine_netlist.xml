@@ -1,0 +1,882 @@
+<IPKISSNETLIST name="TunableDelayLineDefault">
+<NETLIST cell="TunableDelayLineDefault" view="netlist">
+<NETLISTINSTANCE name="mzi1" reference="TunableDelayLineDefault_mzi" />
+<NETLISTINSTANCE name="mzi1_out1_to_mzi2_in1" reference="TunableDelayLineDefault_mzi1_out1_to_mzi2_in1" />
+<NETLISTINSTANCE name="mzi2" reference="TunableDelayLineDefault_mzi" />
+<NETLISTINSTANCE name="mzi2_out1_to_mzi3_in1" reference="TunableDelayLineDefault_mzi2_out1_to_mzi3_in1" />
+<NETLISTINSTANCE name="mzi3" reference="TunableDelayLineDefault_mzi" />
+<NETLISTINSTANCE name="mzi3_out1_to_mzi4_in1" reference="TunableDelayLineDefault_mzi3_out1_to_mzi4_in1" />
+<NETLISTINSTANCE name="mzi4" reference="TunableDelayLineDefault_mzi" />
+<NETLISTINSTANCE name="spiral1" reference="TunableDelayLineDefault_spiral" />
+<NETLISTINSTANCE name="spiral2" reference="TunableDelayLineDefault_spiral" />
+<NETLISTINSTANCE name="spiral3" reference="TunableDelayLineDefault_spiral" />
+<NETLISTINSTANCE name="spiral4" reference="TunableDelayLineDefault_spiral" />
+<NETLISTINSTANCE name="spiral5" reference="TunableDelayLineDefault_spiral" />
+<NETLISTINSTANCE name="spiral6" reference="TunableDelayLineDefault_spiral" />
+<NETLISTINSTANCE name="spiral7" reference="TunableDelayLineDefault_spiral" />
+<TERM name="elec11" domain="ElectricalDomain" />
+<TERM name="elec12" domain="ElectricalDomain" />
+<TERM name="elec21" domain="ElectricalDomain" />
+<TERM name="elec22" domain="ElectricalDomain" />
+<TERM name="elec31" domain="ElectricalDomain" />
+<TERM name="elec32" domain="ElectricalDomain" />
+<TERM name="elec41" domain="ElectricalDomain" />
+<TERM name="elec42" domain="ElectricalDomain" />
+<MODALTERM name="in1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="in2" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out2" domain="OpticalDomain" n_modes="1" />
+<NET name="elec11-mzi1:elec1" domain="ElectricalDomain" n_terms="2" terms="elec11, mzi1:elec1" />
+<NET name="elec12-mzi1:elec2" domain="ElectricalDomain" n_terms="2" terms="elec12, mzi1:elec2" />
+<NET name="elec21-mzi2:elec1" domain="ElectricalDomain" n_terms="2" terms="elec21, mzi2:elec1" />
+<NET name="elec22-mzi2:elec2" domain="ElectricalDomain" n_terms="2" terms="elec22, mzi2:elec2" />
+<NET name="elec31-mzi3:elec1" domain="ElectricalDomain" n_terms="2" terms="elec31, mzi3:elec1" />
+<NET name="elec32-mzi3:elec2" domain="ElectricalDomain" n_terms="2" terms="elec32, mzi3:elec2" />
+<NET name="elec41-mzi4:elec1" domain="ElectricalDomain" n_terms="2" terms="elec41, mzi4:elec1" />
+<NET name="elec42-mzi4:elec2" domain="ElectricalDomain" n_terms="2" terms="elec42, mzi4:elec2" />
+<NET name="in1-mzi1:in1" domain="OpticalDomain" n_terms="2" terms="in1, mzi1:in1" />
+<NET name="in2-mzi1:in2" domain="OpticalDomain" n_terms="2" terms="in2, mzi1:in2" />
+<NET name="mzi1:out1-mzi1_out1_to_mzi2_in1:in" domain="OpticalDomain" n_terms="2" terms="mzi1:out1, mzi1_out1_to_mzi2_in1:in" />
+<NET name="mzi1:out2-spiral1:in" domain="OpticalDomain" n_terms="2" terms="mzi1:out2, spiral1:in" />
+<NET name="mzi1_out1_to_mzi2_in1:out-mzi2:in1" domain="OpticalDomain" n_terms="2" terms="mzi1_out1_to_mzi2_in1:out, mzi2:in1" />
+<NET name="mzi2:in2-spiral1:out" domain="OpticalDomain" n_terms="2" terms="mzi2:in2, spiral1:out" />
+<NET name="mzi2:out1-mzi2_out1_to_mzi3_in1:in" domain="OpticalDomain" n_terms="2" terms="mzi2:out1, mzi2_out1_to_mzi3_in1:in" />
+<NET name="mzi2:out2-spiral2:in" domain="OpticalDomain" n_terms="2" terms="mzi2:out2, spiral2:in" />
+<NET name="mzi2_out1_to_mzi3_in1:out-mzi3:in1" domain="OpticalDomain" n_terms="2" terms="mzi2_out1_to_mzi3_in1:out, mzi3:in1" />
+<NET name="mzi3:in2-spiral3:out" domain="OpticalDomain" n_terms="2" terms="mzi3:in2, spiral3:out" />
+<NET name="mzi3:out1-mzi3_out1_to_mzi4_in1:in" domain="OpticalDomain" n_terms="2" terms="mzi3:out1, mzi3_out1_to_mzi4_in1:in" />
+<NET name="mzi3:out2-spiral4:in" domain="OpticalDomain" n_terms="2" terms="mzi3:out2, spiral4:in" />
+<NET name="mzi3_out1_to_mzi4_in1:out-mzi4:in1" domain="OpticalDomain" n_terms="2" terms="mzi3_out1_to_mzi4_in1:out, mzi4:in1" />
+<NET name="mzi4:in2-spiral7:out" domain="OpticalDomain" n_terms="2" terms="mzi4:in2, spiral7:out" />
+<NET name="mzi4:out1-out1" domain="OpticalDomain" n_terms="2" terms="out1, mzi4:out1" />
+<NET name="mzi4:out2-out2" domain="OpticalDomain" n_terms="2" terms="out2, mzi4:out2" />
+<NET name="spiral2:out-spiral3:in" domain="OpticalDomain" n_terms="2" terms="spiral2:out, spiral3:in" />
+<NET name="spiral4:out-spiral5:in" domain="OpticalDomain" n_terms="2" terms="spiral4:out, spiral5:in" />
+<NET name="spiral5:out-spiral6:in" domain="OpticalDomain" n_terms="2" terms="spiral5:out, spiral6:in" />
+<NET name="spiral6:out-spiral7:in" domain="OpticalDomain" n_terms="2" terms="spiral6:out, spiral7:in" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_dir_coupler" view="netlist">
+<MODALTERM name="in1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="in2" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out2" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_heated_waveguide" view="netlist">
+<TERM name="elec1" domain="ElectricalDomain" />
+<TERM name="elec2" domain="ElectricalDomain" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_mzi1_out1_to_mzi2_in1" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_mzi1_out1_to_mzi2_in1_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_mzi1_out1_to_mzi2_in1_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_mzi2_out1_to_mzi3_in1" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_mzi2_out1_to_mzi3_in1_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_mzi2_out1_to_mzi3_in1_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_mzi3_out1_to_mzi4_in1" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_mzi3_out1_to_mzi4_in1_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_mzi3_out1_to_mzi4_in1_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_mzi_coupler_in_out2_to_coupler_out_in2" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_mzi_coupler_in_out2_to_coupler_out_in2_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_mzi_coupler_in_out2_to_coupler_out_in2_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_mzi" view="netlist">
+<NETLISTINSTANCE name="coupler_in" reference="TunableDelayLineDefault_dir_coupler" />
+<NETLISTINSTANCE name="coupler_in_out2_to_coupler_out_in2" reference="TunableDelayLineDefault_mzi_coupler_in_out2_to_coupler_out_in2" />
+<NETLISTINSTANCE name="coupler_out" reference="TunableDelayLineDefault_dir_coupler" />
+<NETLISTINSTANCE name="phase_shifter" reference="TunableDelayLineDefault_heated_waveguide" />
+<NETLISTINSTANCE name="phase_shifter_in_to_coupler_in_out1" reference="TunableDelayLineDefault_mzi_phase_shifter_in_to_coupler_in_out1" />
+<NETLISTINSTANCE name="phase_shifter_out_to_coupler_out_in1" reference="TunableDelayLineDefault_mzi_phase_shifter_out_to_coupler_out_in1" />
+<TERM name="elec1" domain="ElectricalDomain" />
+<TERM name="elec2" domain="ElectricalDomain" />
+<MODALTERM name="in1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="in2" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out2" domain="OpticalDomain" n_modes="1" />
+<NET name="elec1-phase_shifter:elec1" domain="ElectricalDomain" n_terms="2" terms="elec1, phase_shifter:elec1" />
+<NET name="elec2-phase_shifter:elec2" domain="ElectricalDomain" n_terms="2" terms="elec2, phase_shifter:elec2" />
+<NET name="coupler_in:in1-in1" domain="OpticalDomain" n_terms="2" terms="in1, coupler_in:in1" />
+<NET name="coupler_in:in2-in2" domain="OpticalDomain" n_terms="2" terms="in2, coupler_in:in2" />
+<NET name="coupler_in:out1-phase_shifter_in_to_coupler_in_out1:out" domain="OpticalDomain" n_terms="2" terms="coupler_in:out1, phase_shifter_in_to_coupler_in_out1:out" />
+<NET name="coupler_in:out2-coupler_in_out2_to_coupler_out_in2:in" domain="OpticalDomain" n_terms="2" terms="coupler_in:out2, coupler_in_out2_to_coupler_out_in2:in" />
+<NET name="coupler_in_out2_to_coupler_out_in2:out-coupler_out:in2" domain="OpticalDomain" n_terms="2" terms="coupler_in_out2_to_coupler_out_in2:out, coupler_out:in2" />
+<NET name="coupler_out:in1-phase_shifter_out_to_coupler_out_in1:out" domain="OpticalDomain" n_terms="2" terms="coupler_out:in1, phase_shifter_out_to_coupler_out_in1:out" />
+<NET name="coupler_out:out1-out1" domain="OpticalDomain" n_terms="2" terms="out1, coupler_out:out1" />
+<NET name="coupler_out:out2-out2" domain="OpticalDomain" n_terms="2" terms="out2, coupler_out:out2" />
+<NET name="phase_shifter:in-phase_shifter_in_to_coupler_in_out1:in" domain="OpticalDomain" n_terms="2" terms="phase_shifter:in, phase_shifter_in_to_coupler_in_out1:in" />
+<NET name="phase_shifter:out-phase_shifter_out_to_coupler_out_in1:in" domain="OpticalDomain" n_terms="2" terms="phase_shifter:out, phase_shifter_out_to_coupler_out_in1:in" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_mzi_phase_shifter_in_to_coupler_in_out1" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_mzi_phase_shifter_in_to_coupler_in_out1_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_mzi_phase_shifter_in_to_coupler_in_out1_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_mzi_phase_shifter_out_to_coupler_out_in1" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_mzi_phase_shifter_out_to_coupler_out_in1_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_mzi_phase_shifter_out_to_coupler_out_in1_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral" view="netlist">
+<NETLISTINSTANCE name="W1" reference="TunableDelayLineDefault_spiral_trace1" />
+<NETLISTINSTANCE name="W10" reference="TunableDelayLineDefault_spiral_trace10" />
+<NETLISTINSTANCE name="W11" reference="TunableDelayLineDefault_spiral_trace11" />
+<NETLISTINSTANCE name="W12" reference="TunableDelayLineDefault_spiral_trace12" />
+<NETLISTINSTANCE name="W13" reference="TunableDelayLineDefault_spiral_trace13" />
+<NETLISTINSTANCE name="W14" reference="TunableDelayLineDefault_spiral_trace14" />
+<NETLISTINSTANCE name="W15" reference="TunableDelayLineDefault_spiral_trace15" />
+<NETLISTINSTANCE name="W16" reference="TunableDelayLineDefault_spiral_trace16" />
+<NETLISTINSTANCE name="W17" reference="TunableDelayLineDefault_spiral_trace17" />
+<NETLISTINSTANCE name="W18" reference="TunableDelayLineDefault_spiral_trace18" />
+<NETLISTINSTANCE name="W19" reference="TunableDelayLineDefault_spiral_trace19" />
+<NETLISTINSTANCE name="W2" reference="TunableDelayLineDefault_spiral_trace2" />
+<NETLISTINSTANCE name="W20" reference="TunableDelayLineDefault_spiral_trace20" />
+<NETLISTINSTANCE name="W21" reference="TunableDelayLineDefault_spiral_trace21" />
+<NETLISTINSTANCE name="W22" reference="TunableDelayLineDefault_spiral_trace22" />
+<NETLISTINSTANCE name="W23" reference="TunableDelayLineDefault_spiral_trace23" />
+<NETLISTINSTANCE name="W24" reference="TunableDelayLineDefault_spiral_trace24" />
+<NETLISTINSTANCE name="W25" reference="TunableDelayLineDefault_spiral_trace25" />
+<NETLISTINSTANCE name="W26" reference="TunableDelayLineDefault_spiral_trace26" />
+<NETLISTINSTANCE name="W27" reference="TunableDelayLineDefault_spiral_trace27" />
+<NETLISTINSTANCE name="W28" reference="TunableDelayLineDefault_spiral_trace28" />
+<NETLISTINSTANCE name="W29" reference="TunableDelayLineDefault_spiral_trace29" />
+<NETLISTINSTANCE name="W3" reference="TunableDelayLineDefault_spiral_trace3" />
+<NETLISTINSTANCE name="W30" reference="TunableDelayLineDefault_spiral_trace30" />
+<NETLISTINSTANCE name="W31" reference="TunableDelayLineDefault_spiral_trace31" />
+<NETLISTINSTANCE name="W32" reference="TunableDelayLineDefault_spiral_trace32" />
+<NETLISTINSTANCE name="W33" reference="TunableDelayLineDefault_spiral_trace33" />
+<NETLISTINSTANCE name="W34" reference="TunableDelayLineDefault_spiral_trace34" />
+<NETLISTINSTANCE name="W35" reference="TunableDelayLineDefault_spiral_trace35" />
+<NETLISTINSTANCE name="W36" reference="TunableDelayLineDefault_spiral_trace36" />
+<NETLISTINSTANCE name="W37" reference="TunableDelayLineDefault_spiral_trace37" />
+<NETLISTINSTANCE name="W38" reference="TunableDelayLineDefault_spiral_trace38" />
+<NETLISTINSTANCE name="W39" reference="TunableDelayLineDefault_spiral_trace39" />
+<NETLISTINSTANCE name="W4" reference="TunableDelayLineDefault_spiral_trace4" />
+<NETLISTINSTANCE name="W40" reference="TunableDelayLineDefault_spiral_trace40" />
+<NETLISTINSTANCE name="W41" reference="TunableDelayLineDefault_spiral_trace41" />
+<NETLISTINSTANCE name="W42" reference="TunableDelayLineDefault_spiral_trace42" />
+<NETLISTINSTANCE name="W43" reference="TunableDelayLineDefault_spiral_trace43" />
+<NETLISTINSTANCE name="W44" reference="TunableDelayLineDefault_spiral_trace44" />
+<NETLISTINSTANCE name="W45" reference="TunableDelayLineDefault_spiral_trace45" />
+<NETLISTINSTANCE name="W46" reference="TunableDelayLineDefault_spiral_trace46" />
+<NETLISTINSTANCE name="W47" reference="TunableDelayLineDefault_spiral_trace47" />
+<NETLISTINSTANCE name="W48" reference="TunableDelayLineDefault_spiral_trace48" />
+<NETLISTINSTANCE name="W49" reference="TunableDelayLineDefault_spiral_trace49" />
+<NETLISTINSTANCE name="W5" reference="TunableDelayLineDefault_spiral_trace5" />
+<NETLISTINSTANCE name="W50" reference="TunableDelayLineDefault_spiral_trace50" />
+<NETLISTINSTANCE name="W51" reference="TunableDelayLineDefault_spiral_trace51" />
+<NETLISTINSTANCE name="W52" reference="TunableDelayLineDefault_spiral_trace52" />
+<NETLISTINSTANCE name="W53" reference="TunableDelayLineDefault_spiral_trace53" />
+<NETLISTINSTANCE name="W54" reference="TunableDelayLineDefault_spiral_trace54" />
+<NETLISTINSTANCE name="W55" reference="TunableDelayLineDefault_spiral_trace55" />
+<NETLISTINSTANCE name="W6" reference="TunableDelayLineDefault_spiral_trace6" />
+<NETLISTINSTANCE name="W7" reference="TunableDelayLineDefault_spiral_trace7" />
+<NETLISTINSTANCE name="W8" reference="TunableDelayLineDefault_spiral_trace8" />
+<NETLISTINSTANCE name="W9" reference="TunableDelayLineDefault_spiral_trace9" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="chain_net_1" domain="OpticalDomain" n_terms="2" terms="W1:out, W2:in" />
+<NET name="chain_net_10" domain="OpticalDomain" n_terms="2" terms="W10:out, W11:in" />
+<NET name="chain_net_11" domain="OpticalDomain" n_terms="2" terms="W11:out, W12:in" />
+<NET name="chain_net_12" domain="OpticalDomain" n_terms="2" terms="W12:out, W13:in" />
+<NET name="chain_net_13" domain="OpticalDomain" n_terms="2" terms="W13:out, W14:in" />
+<NET name="chain_net_14" domain="OpticalDomain" n_terms="2" terms="W14:out, W15:in" />
+<NET name="chain_net_15" domain="OpticalDomain" n_terms="2" terms="W15:out, W16:in" />
+<NET name="chain_net_16" domain="OpticalDomain" n_terms="2" terms="W16:out, W17:in" />
+<NET name="chain_net_17" domain="OpticalDomain" n_terms="2" terms="W17:out, W18:in" />
+<NET name="chain_net_18" domain="OpticalDomain" n_terms="2" terms="W18:out, W19:in" />
+<NET name="chain_net_19" domain="OpticalDomain" n_terms="2" terms="W19:out, W20:in" />
+<NET name="chain_net_2" domain="OpticalDomain" n_terms="2" terms="W2:out, W3:in" />
+<NET name="chain_net_20" domain="OpticalDomain" n_terms="2" terms="W20:out, W21:in" />
+<NET name="chain_net_21" domain="OpticalDomain" n_terms="2" terms="W21:out, W22:in" />
+<NET name="chain_net_22" domain="OpticalDomain" n_terms="2" terms="W22:out, W23:in" />
+<NET name="chain_net_23" domain="OpticalDomain" n_terms="2" terms="W23:out, W24:in" />
+<NET name="chain_net_24" domain="OpticalDomain" n_terms="2" terms="W24:out, W25:in" />
+<NET name="chain_net_25" domain="OpticalDomain" n_terms="2" terms="W25:out, W26:in" />
+<NET name="chain_net_26" domain="OpticalDomain" n_terms="2" terms="W26:out, W27:in" />
+<NET name="chain_net_27" domain="OpticalDomain" n_terms="2" terms="W27:out, W28:in" />
+<NET name="chain_net_28" domain="OpticalDomain" n_terms="2" terms="W28:out, W29:in" />
+<NET name="chain_net_29" domain="OpticalDomain" n_terms="2" terms="W29:out, W30:in" />
+<NET name="chain_net_3" domain="OpticalDomain" n_terms="2" terms="W3:out, W4:in" />
+<NET name="chain_net_30" domain="OpticalDomain" n_terms="2" terms="W30:out, W31:in" />
+<NET name="chain_net_31" domain="OpticalDomain" n_terms="2" terms="W31:out, W32:in" />
+<NET name="chain_net_32" domain="OpticalDomain" n_terms="2" terms="W32:out, W33:in" />
+<NET name="chain_net_33" domain="OpticalDomain" n_terms="2" terms="W33:out, W34:in" />
+<NET name="chain_net_34" domain="OpticalDomain" n_terms="2" terms="W34:out, W35:in" />
+<NET name="chain_net_35" domain="OpticalDomain" n_terms="2" terms="W35:out, W36:in" />
+<NET name="chain_net_36" domain="OpticalDomain" n_terms="2" terms="W36:out, W37:in" />
+<NET name="chain_net_37" domain="OpticalDomain" n_terms="2" terms="W37:out, W38:in" />
+<NET name="chain_net_38" domain="OpticalDomain" n_terms="2" terms="W38:out, W39:in" />
+<NET name="chain_net_39" domain="OpticalDomain" n_terms="2" terms="W39:out, W40:in" />
+<NET name="chain_net_4" domain="OpticalDomain" n_terms="2" terms="W4:out, W5:in" />
+<NET name="chain_net_40" domain="OpticalDomain" n_terms="2" terms="W40:out, W41:in" />
+<NET name="chain_net_41" domain="OpticalDomain" n_terms="2" terms="W41:out, W42:in" />
+<NET name="chain_net_42" domain="OpticalDomain" n_terms="2" terms="W42:out, W43:in" />
+<NET name="chain_net_43" domain="OpticalDomain" n_terms="2" terms="W43:out, W44:in" />
+<NET name="chain_net_44" domain="OpticalDomain" n_terms="2" terms="W44:out, W45:in" />
+<NET name="chain_net_45" domain="OpticalDomain" n_terms="2" terms="W45:out, W46:in" />
+<NET name="chain_net_46" domain="OpticalDomain" n_terms="2" terms="W46:out, W47:in" />
+<NET name="chain_net_47" domain="OpticalDomain" n_terms="2" terms="W47:out, W48:in" />
+<NET name="chain_net_48" domain="OpticalDomain" n_terms="2" terms="W48:out, W49:in" />
+<NET name="chain_net_49" domain="OpticalDomain" n_terms="2" terms="W49:out, W50:in" />
+<NET name="chain_net_5" domain="OpticalDomain" n_terms="2" terms="W5:out, W6:in" />
+<NET name="chain_net_50" domain="OpticalDomain" n_terms="2" terms="W50:out, W51:in" />
+<NET name="chain_net_51" domain="OpticalDomain" n_terms="2" terms="W51:out, W52:in" />
+<NET name="chain_net_52" domain="OpticalDomain" n_terms="2" terms="W52:out, W53:in" />
+<NET name="chain_net_53" domain="OpticalDomain" n_terms="2" terms="W53:out, W54:in" />
+<NET name="chain_net_54" domain="OpticalDomain" n_terms="2" terms="W54:out, W55:in" />
+<NET name="chain_net_6" domain="OpticalDomain" n_terms="2" terms="W6:out, W7:in" />
+<NET name="chain_net_7" domain="OpticalDomain" n_terms="2" terms="W7:out, W8:in" />
+<NET name="chain_net_8" domain="OpticalDomain" n_terms="2" terms="W8:out, W9:in" />
+<NET name="chain_net_9" domain="OpticalDomain" n_terms="2" terms="W9:out, W10:in" />
+<NET name="net_in" domain="OpticalDomain" n_terms="2" terms="W1:in, in" />
+<NET name="net_out" domain="OpticalDomain" n_terms="2" terms="W55:out, out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace10" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace10_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace10_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace11" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace11_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace11_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace12" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace12_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace12_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace13" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace13_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace13_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace14" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace14_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace14_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace15" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace15_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace15_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace16" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace16_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace16_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace17" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace17_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace17_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace18" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace18_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace18_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace19" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace19_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace19_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace1" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace1_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace1_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace20" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace20_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace20_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace21" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace21_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace21_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace22" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace22_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace22_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace23" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace23_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace23_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace24" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace24_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace24_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace25" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace25_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace25_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace26" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace26_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace26_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace27" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace27_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace27_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace28" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace28_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace28_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace29" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace29_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace29_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace2" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace2_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace2_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace30" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace30_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace30_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace31" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace31_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace31_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace32" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace32_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace32_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace33" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace33_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace33_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace34" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace34_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace34_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace35" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace35_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace35_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace36" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace36_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace36_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace37" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace37_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace37_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace38" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace38_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace38_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace39" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace39_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace39_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace3" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace3_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace3_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace40" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace40_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace40_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace41" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace41_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace41_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace42" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace42_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace42_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace43" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace43_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace43_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace44" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace44_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace44_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace45" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace45_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace45_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace46" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace46_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace46_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace47" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace47_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace47_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace48" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace48_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace48_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace49" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace49_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace49_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace4" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace4_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace4_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace50" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace50_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace50_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace51" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace51_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace51_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace52" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace52_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace52_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace53" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace53_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace53_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace54" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace54_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace54_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace55" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace55_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace55_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace5" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace5_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace5_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace6" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace6_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace6_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace7" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace7_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace7_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace8" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace8_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace8_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace9" view="netlist">
+<NETLISTINSTANCE name="contents" reference="TunableDelayLineDefault_spiral_trace9_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="TunableDelayLineDefault_spiral_trace9_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+</IPKISSNETLIST>

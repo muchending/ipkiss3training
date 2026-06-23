@@ -1,0 +1,73 @@
+<IPKISSNETLIST name="MZIDefault">
+<NETLIST cell="MZIDefault" view="netlist">
+<NETLISTINSTANCE name="coupler_in" reference="MZIDefault_coupler" />
+<NETLISTINSTANCE name="coupler_in_out2_to_coupler_out_in2" reference="MZIDefault_coupler_in_out2_to_coupler_out_in2" />
+<NETLISTINSTANCE name="coupler_out" reference="MZIDefault_coupler" />
+<NETLISTINSTANCE name="phase_shifter" reference="MZIDefault_phase_shifter" />
+<NETLISTINSTANCE name="phase_shifter_in_to_coupler_in_out1" reference="MZIDefault_phase_shifter_in_to_coupler_in_out1" />
+<NETLISTINSTANCE name="phase_shifter_out_to_coupler_out_in1" reference="MZIDefault_phase_shifter_out_to_coupler_out_in1" />
+<TERM name="elec1" domain="ElectricalDomain" />
+<TERM name="elec2" domain="ElectricalDomain" />
+<MODALTERM name="in1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="in2" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out2" domain="OpticalDomain" n_modes="1" />
+<NET name="elec1-phase_shifter:elec1" domain="ElectricalDomain" n_terms="2" terms="elec1, phase_shifter:elec1" />
+<NET name="elec2-phase_shifter:elec2" domain="ElectricalDomain" n_terms="2" terms="elec2, phase_shifter:elec2" />
+<NET name="coupler_in:in1-in1" domain="OpticalDomain" n_terms="2" terms="in1, coupler_in:in1" />
+<NET name="coupler_in:in2-in2" domain="OpticalDomain" n_terms="2" terms="in2, coupler_in:in2" />
+<NET name="coupler_in:out1-phase_shifter_in_to_coupler_in_out1:out" domain="OpticalDomain" n_terms="2" terms="coupler_in:out1, phase_shifter_in_to_coupler_in_out1:out" />
+<NET name="coupler_in:out2-coupler_in_out2_to_coupler_out_in2:in" domain="OpticalDomain" n_terms="2" terms="coupler_in:out2, coupler_in_out2_to_coupler_out_in2:in" />
+<NET name="coupler_in_out2_to_coupler_out_in2:out-coupler_out:in2" domain="OpticalDomain" n_terms="2" terms="coupler_in_out2_to_coupler_out_in2:out, coupler_out:in2" />
+<NET name="coupler_out:in1-phase_shifter_out_to_coupler_out_in1:out" domain="OpticalDomain" n_terms="2" terms="coupler_out:in1, phase_shifter_out_to_coupler_out_in1:out" />
+<NET name="coupler_out:out1-out1" domain="OpticalDomain" n_terms="2" terms="out1, coupler_out:out1" />
+<NET name="coupler_out:out2-out2" domain="OpticalDomain" n_terms="2" terms="out2, coupler_out:out2" />
+<NET name="phase_shifter:in-phase_shifter_in_to_coupler_in_out1:in" domain="OpticalDomain" n_terms="2" terms="phase_shifter:in, phase_shifter_in_to_coupler_in_out1:in" />
+<NET name="phase_shifter:out-phase_shifter_out_to_coupler_out_in1:in" domain="OpticalDomain" n_terms="2" terms="phase_shifter:out, phase_shifter_out_to_coupler_out_in1:in" />
+</NETLIST>
+<NETLIST cell="MZIDefault_coupler_in_out2_to_coupler_out_in2" view="netlist">
+<NETLISTINSTANCE name="contents" reference="MZIDefault_coupler_in_out2_to_coupler_out_in2_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="MZIDefault_coupler_in_out2_to_coupler_out_in2_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="MZIDefault_coupler" view="netlist">
+<MODALTERM name="in1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="in2" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out2" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="MZIDefault_phase_shifter_in_to_coupler_in_out1" view="netlist">
+<NETLISTINSTANCE name="contents" reference="MZIDefault_phase_shifter_in_to_coupler_in_out1_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="MZIDefault_phase_shifter_in_to_coupler_in_out1_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="MZIDefault_phase_shifter" view="netlist">
+<TERM name="elec1" domain="ElectricalDomain" />
+<TERM name="elec2" domain="ElectricalDomain" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="MZIDefault_phase_shifter_out_to_coupler_out_in1" view="netlist">
+<NETLISTINSTANCE name="contents" reference="MZIDefault_phase_shifter_out_to_coupler_out_in1_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="MZIDefault_phase_shifter_out_to_coupler_out_in1_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+</IPKISSNETLIST>

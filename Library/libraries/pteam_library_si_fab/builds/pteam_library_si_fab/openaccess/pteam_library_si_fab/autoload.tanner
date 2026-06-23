@@ -1,0 +1,36 @@
+# ---------------------------------------------------------------------------------------------------
+# If you wish to change the IPKISS VERSION, change the environment variable LUCEDA_PYEVAL to the
+# corresponding version you want to use. For instance, if you want to use version 3.4:
+#   LUCEDA_PYEVAL=C:\luceda\ipkiss_340\python\envs\ipkiss3\python.exe
+# This will only work for versions 3.4 and up.
+# ---------------------------------------------------------------------------------------------------
+
+proc LoadLucedaTclFile {ipkiss_path} {
+    puts "Loading Luceda L-Edit integration..."
+	set LucedaFilePath [string map {/ \\} [file join $ipkiss_path "Lib/site-packages/macros/tanner/ledit_ipkisseda.file"]];
+	set rtn [source $LucedaFilePath]
+	if { $rtn != "" } {
+		puts "$rtn"
+		return 0
+	}
+	
+	Luceda::Init;
+
+}
+
+if {![namespace exists Luceda]} {
+	if {![info exists ::env(LUCEDA_PYEVAL)]} {
+		puts "-------------------------------------ERROR--------------------------------------"
+		puts "  The environment variable LUCEDA_PYEVAL is not set."
+		puts "  Set LUCEDA_PYEVAL before continuing."
+		puts ""
+		puts "  For instance, if you want to use IPKISS version 3.4.0:"
+		puts "  LUCEDA_PYEVAL=C:/luceda/ipkiss_340/python/envs/ipkiss3/python.exe"
+		puts "----------------------------------------------------------------------------------------"
+	} elseif {[catch {LoadLucedaTclFile [file dirname $::env(LUCEDA_PYEVAL)]} errmsg]} {
+		puts "-------------------------------------ERROR--------------------------------------"
+		puts " An Error occurred while loading the Luceda macros: "
+		puts " $errmsg"
+		puts "----------------------------------------------------------------------------------------"
+	}
+}

@@ -1,0 +1,122 @@
+<IPKISSNETLIST name="Mux2HeatedDefault">
+<NETLIST cell="Mux2HeatedDefault" view="netlist">
+<NETLISTINSTANCE name="dc_0" reference="Mux2HeatedDefaultdc_0" />
+<NETLISTINSTANCE name="dc_1" reference="Mux2HeatedDefaultdc_1" />
+<NETLISTINSTANCE name="dc_2" reference="Mux2HeatedDefaultdc_2" />
+<NETLISTINSTANCE name="dc_3" reference="Mux2HeatedDefaultdc_3" />
+<NETLISTINSTANCE name="dc_4" reference="Mux2HeatedDefaultdc_4" />
+<NETLISTINSTANCE name="wd_0" reference="Mux2HeatedDefaultd_0" />
+<NETLISTINSTANCE name="wd_1" reference="Mux2HeatedDefaultd_1" />
+<NETLISTINSTANCE name="wd_2" reference="Mux2HeatedDefaultd_2" />
+<NETLISTINSTANCE name="wd_3" reference="Mux2HeatedDefaultd_3" />
+<NETLISTINSTANCE name="wf_0" reference="Mux2HeatedDefaultwf" />
+<NETLISTINSTANCE name="wf_1" reference="Mux2HeatedDefaultwf" />
+<NETLISTINSTANCE name="wf_2" reference="Mux2HeatedDefaultwf" />
+<NETLISTINSTANCE name="wf_3" reference="Mux2HeatedDefaultwf" />
+<TERM name="ht_in0" domain="ElectricalDomain" />
+<TERM name="ht_in1" domain="ElectricalDomain" />
+<TERM name="ht_in2" domain="ElectricalDomain" />
+<TERM name="ht_in3" domain="ElectricalDomain" />
+<TERM name="ht_out0" domain="ElectricalDomain" />
+<TERM name="ht_out1" domain="ElectricalDomain" />
+<TERM name="ht_out2" domain="ElectricalDomain" />
+<TERM name="ht_out3" domain="ElectricalDomain" />
+<MODALTERM name="in1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="in2" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out2" domain="OpticalDomain" n_modes="1" />
+<NET name="ht_in0-wd_0:elec1" domain="ElectricalDomain" n_terms="2" terms="ht_in0, wd_0:elec1" />
+<NET name="ht_in1-wd_1:elec1" domain="ElectricalDomain" n_terms="2" terms="ht_in1, wd_1:elec1" />
+<NET name="ht_in2-wd_2:elec1" domain="ElectricalDomain" n_terms="2" terms="ht_in2, wd_2:elec1" />
+<NET name="ht_in3-wd_3:elec1" domain="ElectricalDomain" n_terms="2" terms="ht_in3, wd_3:elec1" />
+<NET name="ht_out0-wd_0:elec2" domain="ElectricalDomain" n_terms="2" terms="ht_out0, wd_0:elec2" />
+<NET name="ht_out1-wd_1:elec2" domain="ElectricalDomain" n_terms="2" terms="ht_out1, wd_1:elec2" />
+<NET name="ht_out2-wd_2:elec2" domain="ElectricalDomain" n_terms="2" terms="ht_out2, wd_2:elec2" />
+<NET name="ht_out3-wd_3:elec2" domain="ElectricalDomain" n_terms="2" terms="ht_out3, wd_3:elec2" />
+<NET name="dc_0:in1-in1" domain="OpticalDomain" n_terms="2" terms="in1, dc_0:in1" />
+<NET name="dc_0:in2-in2" domain="OpticalDomain" n_terms="2" terms="in2, dc_0:in2" />
+<NET name="dc_0:out1-wf_0:in" domain="OpticalDomain" n_terms="2" terms="dc_0:out1, wf_0:in" />
+<NET name="dc_0:out2-wd_0:in" domain="OpticalDomain" n_terms="2" terms="dc_0:out2, wd_0:in" />
+<NET name="dc_1:in1-wf_0:out" domain="OpticalDomain" n_terms="2" terms="dc_1:in1, wf_0:out" />
+<NET name="dc_1:in2-wd_0:out" domain="OpticalDomain" n_terms="2" terms="dc_1:in2, wd_0:out" />
+<NET name="dc_1:out1-wf_1:in" domain="OpticalDomain" n_terms="2" terms="dc_1:out1, wf_1:in" />
+<NET name="dc_1:out2-wd_1:in" domain="OpticalDomain" n_terms="2" terms="dc_1:out2, wd_1:in" />
+<NET name="dc_2:in1-wf_1:out" domain="OpticalDomain" n_terms="2" terms="dc_2:in1, wf_1:out" />
+<NET name="dc_2:in2-wd_1:out" domain="OpticalDomain" n_terms="2" terms="dc_2:in2, wd_1:out" />
+<NET name="dc_2:out1-wd_2:in" domain="OpticalDomain" n_terms="2" terms="dc_2:out1, wd_2:in" />
+<NET name="dc_2:out2-wf_2:in" domain="OpticalDomain" n_terms="2" terms="dc_2:out2, wf_2:in" />
+<NET name="dc_3:in1-wd_2:out" domain="OpticalDomain" n_terms="2" terms="dc_3:in1, wd_2:out" />
+<NET name="dc_3:in2-wf_2:out" domain="OpticalDomain" n_terms="2" terms="dc_3:in2, wf_2:out" />
+<NET name="dc_3:out1-wd_3:in" domain="OpticalDomain" n_terms="2" terms="dc_3:out1, wd_3:in" />
+<NET name="dc_3:out2-wf_3:in" domain="OpticalDomain" n_terms="2" terms="dc_3:out2, wf_3:in" />
+<NET name="dc_4:in1-wd_3:out" domain="OpticalDomain" n_terms="2" terms="dc_4:in1, wd_3:out" />
+<NET name="dc_4:in2-wf_3:out" domain="OpticalDomain" n_terms="2" terms="dc_4:in2, wf_3:out" />
+<NET name="dc_4:out1-out1" domain="OpticalDomain" n_terms="2" terms="out1, dc_4:out1" />
+<NET name="dc_4:out2-out2" domain="OpticalDomain" n_terms="2" terms="out2, dc_4:out2" />
+</NETLIST>
+<NETLIST cell="Mux2HeatedDefaultd_0" view="netlist">
+<TERM name="elec1" domain="ElectricalDomain" />
+<TERM name="elec2" domain="ElectricalDomain" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="Mux2HeatedDefaultd_1" view="netlist">
+<TERM name="elec1" domain="ElectricalDomain" />
+<TERM name="elec2" domain="ElectricalDomain" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="Mux2HeatedDefaultd_2" view="netlist">
+<TERM name="elec1" domain="ElectricalDomain" />
+<TERM name="elec2" domain="ElectricalDomain" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="Mux2HeatedDefaultd_3" view="netlist">
+<TERM name="elec1" domain="ElectricalDomain" />
+<TERM name="elec2" domain="ElectricalDomain" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="Mux2HeatedDefaultdc_0" view="netlist">
+<MODALTERM name="in1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="in2" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out2" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="Mux2HeatedDefaultdc_1" view="netlist">
+<MODALTERM name="in1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="in2" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out2" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="Mux2HeatedDefaultdc_2" view="netlist">
+<MODALTERM name="in1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="in2" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out2" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="Mux2HeatedDefaultdc_3" view="netlist">
+<MODALTERM name="in1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="in2" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out2" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="Mux2HeatedDefaultdc_4" view="netlist">
+<MODALTERM name="in1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="in2" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out1" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out2" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+<NETLIST cell="Mux2HeatedDefaultwf" view="netlist">
+<NETLISTINSTANCE name="contents" reference="Mux2HeatedDefaultwf_trace" />
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+<NET name="net_0" domain="OpticalDomain" n_terms="2" terms="in, contents:in" />
+<NET name="net_1" domain="OpticalDomain" n_terms="2" terms="out, contents:out" />
+</NETLIST>
+<NETLIST cell="Mux2HeatedDefaultwf_trace" view="netlist">
+<MODALTERM name="in" domain="OpticalDomain" n_modes="1" />
+<MODALTERM name="out" domain="OpticalDomain" n_modes="1" />
+</NETLIST>
+</IPKISSNETLIST>

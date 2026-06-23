@@ -1,0 +1,1289 @@
+{
+  "cells": {
+    "DirectionalCouplerDC2": {
+      "symbol": {
+        "terms": [
+          {
+            "name": "out1",
+            "domain": "OpticalDomain",
+            "position": [
+              50,
+              -8.333333333333334
+            ]
+          },
+          {
+            "name": "out2",
+            "domain": "OpticalDomain",
+            "position": [
+              50,
+              8.333333333333332
+            ]
+          },
+          {
+            "name": "in1",
+            "domain": "OpticalDomain",
+            "position": [
+              -50,
+              -8.333333333333334
+            ]
+          },
+          {
+            "name": "in2",
+            "domain": "OpticalDomain",
+            "position": [
+              -50,
+              8.333333333333332
+            ]
+          }
+        ],
+        "image": "DirectionalCoupler",
+        "width": 100,
+        "height": 50,
+        "parameters": [
+          {
+            "default": "[auto]",
+            "name": "adiabatic_angle",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "bend_height",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "bend_length",
+            "type": "float"
+          },
+          {
+            "default": 0.5,
+            "name": "power_fraction",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "routing_method",
+            "type": "generic"
+          },
+          {
+            "default": "[auto]",
+            "name": "spacing",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "straight_length",
+            "type": "float"
+          },
+          {
+            "default": 1.55,
+            "name": "target_wavelength",
+            "type": "float"
+          }
+        ],
+        "parametersPerView": {
+          "CircuitModelView": [],
+          "LayoutView": [],
+          "NetlistView": [],
+          "PCell": [
+            "power_fraction",
+            "target_wavelength"
+          ]
+        }
+      }
+    },
+    "MZI": {
+      "symbol": {
+        "image": "MZI",
+        "parameters": [
+          {
+            "default": "[auto]",
+            "name": "coupler",
+            "type": "generic"
+          },
+          {
+            "default": "[auto]",
+            "name": "exposed_ports",
+            "type": "generic"
+          },
+          {
+            "default": 25.0,
+            "name": "extra_y_separation",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "insts",
+            "type": "generic"
+          },
+          {
+            "default": "[auto]",
+            "name": "phase_shifter",
+            "type": "generic"
+          },
+          {
+            "default": "[auto]",
+            "name": "specs",
+            "type": "array"
+          },
+          {
+            "default": {
+              "data": "true",
+              "encoding": "json"
+            },
+            "name": "strict",
+            "type": "generic"
+          },
+          {
+            "default": 20.0,
+            "name": "x_separation",
+            "type": "float"
+          }
+        ],
+        "parametersPerView": {
+          "CircuitModelView": [],
+          "LayoutView": [],
+          "NetlistView": [],
+          "PCell": [
+            "insts",
+            "specs",
+            "exposed_ports",
+            "strict",
+            "coupler",
+            "phase_shifter",
+            "x_separation",
+            "extra_y_separation"
+          ]
+        },
+        "terms": [
+          {
+            "domain": "OpticalDomain",
+            "name": "out1",
+            "position": [
+              50.0,
+              -12.5
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out2",
+            "position": [
+              50.0,
+              10.0
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "in1",
+            "position": [
+              -50.0,
+              -12.5
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "in2",
+            "position": [
+              -50.0,
+              10.0
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "elec1",
+            "position": [
+              -20.0,
+              25.0
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "elec2",
+            "position": [
+              20.0,
+              25.0
+            ]
+          }
+        ]
+      }
+    },
+    "MZModulator": {
+      "symbol": {
+        "image": "MZM",
+        "parameters": [
+          {
+            "default": 10.0,
+            "name": "bend_radius",
+            "type": "float"
+          },
+          {
+            "default": 1.55,
+            "name": "center_wavelength",
+            "type": "float"
+          },
+          {
+            "default": 10,
+            "name": "delay_order",
+            "type": "int"
+          },
+          {
+            "default": "[auto]",
+            "name": "heater",
+            "type": "generic"
+          },
+          {
+            "default": "[auto]",
+            "name": "phaseshifter",
+            "type": "generic"
+          },
+          {
+            "default": "[auto]",
+            "name": "resistor",
+            "type": "generic"
+          },
+          {
+            "default": 20.0,
+            "name": "rf_ground_width",
+            "type": "float"
+          },
+          {
+            "default": 75.0,
+            "name": "rf_pad_length",
+            "type": "float"
+          },
+          {
+            "default": 75.0,
+            "name": "rf_pad_width",
+            "type": "float"
+          },
+          {
+            "default": 150.0,
+            "name": "rf_pitch_in",
+            "type": "float"
+          },
+          {
+            "default": 150.0,
+            "name": "rf_pitch_out",
+            "type": "float"
+          },
+          {
+            "default": 5.0,
+            "name": "rf_signal_width",
+            "type": "float"
+          },
+          {
+            "default": 100.0,
+            "name": "rf_taper_length",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "splitter",
+            "type": "generic"
+          },
+          {
+            "default": "[auto]",
+            "name": "taper",
+            "type": "generic"
+          }
+        ],
+        "parametersPerView": {
+          "CircuitModelView": [],
+          "LayoutView": [],
+          "NetlistView": [],
+          "PCell": [
+            "center_wavelength",
+            "phaseshifter",
+            "splitter",
+            "taper",
+            "heater",
+            "delay_order",
+            "rf_pitch_in",
+            "rf_pitch_out",
+            "rf_pad_length",
+            "rf_pad_width",
+            "rf_signal_width",
+            "rf_ground_width",
+            "rf_taper_length",
+            "resistor",
+            "bend_radius"
+          ]
+        },
+        "terms": [
+          {
+            "domain": "ElectricalDomain",
+            "name": "ele1",
+            "position": [
+              50.0,
+              -12.5
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out",
+            "position": [
+              50.0,
+              0.0
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "ele2",
+            "position": [
+              50.0,
+              12.5
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "SL_pad",
+            "position": [
+              -45.0,
+              -25.0
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "in",
+            "position": [
+              -50.0,
+              -4.999999999999999
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "G2_pad",
+            "position": [
+              -50.0,
+              4.999999999999999
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "SR_pad",
+            "position": [
+              -45.0,
+              25.0
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "G3_pad",
+            "position": [
+              -30.0,
+              25.0
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "G1_pad",
+            "position": [
+              -30.0,
+              -25.0
+            ]
+          }
+        ],
+        "width": 100
+      }
+    },
+    "Mux2": {
+      "symbol": {
+        "image": "Default",
+        "parameters": [
+          {
+            "default": "[auto]",
+            "name": "bend_radius",
+            "type": "float"
+          },
+          {
+            "default": 1.55,
+            "name": "center_wavelength",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "delay_lengths",
+            "type": "array"
+          },
+          {
+            "default": "[auto]",
+            "name": "directional_couplers",
+            "type": "array"
+          },
+          {
+            "default": "[auto]",
+            "name": "exposed_ports",
+            "type": "generic"
+          },
+          {
+            "default": 0.01,
+            "name": "fsr",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "insts",
+            "type": "generic"
+          },
+          {
+            "default": 0.0,
+            "name": "phase_error_correlation_length",
+            "type": "float"
+          },
+          {
+            "default": 0.0,
+            "name": "phase_error_width_deviation",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "specs",
+            "type": "array"
+          },
+          {
+            "default": {
+              "data": "true",
+              "encoding": "json"
+            },
+            "name": "strict",
+            "type": "generic"
+          }
+        ],
+        "parametersPerView": {
+          "CircuitModelView": [],
+          "LayoutView": [],
+          "NetlistView": [],
+          "PCell": [
+            "insts",
+            "specs",
+            "exposed_ports",
+            "strict",
+            "directional_couplers",
+            "center_wavelength",
+            "phase_error_width_deviation",
+            "phase_error_correlation_length",
+            "fsr"
+          ]
+        },
+        "terms": [
+          {
+            "domain": "OpticalDomain",
+            "name": "out1",
+            "position": [
+              50.0,
+              -8.333333333333334
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out2",
+            "position": [
+              50.0,
+              8.333333333333332
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "in1",
+            "position": [
+              -50.0,
+              -8.333333333333334
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "in2",
+            "position": [
+              -50.0,
+              8.333333333333332
+            ]
+          }
+        ]
+      }
+    },
+    "Mux2Heated": {
+      "symbol": {
+        "height": 75,
+        "image": "Default",
+        "parameters": [
+          {
+            "default": "[auto]",
+            "name": "bend_radius",
+            "type": "float"
+          },
+          {
+            "default": 1.55,
+            "name": "center_wavelength",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "delay_lengths",
+            "type": "array"
+          },
+          {
+            "default": "[auto]",
+            "name": "directional_couplers",
+            "type": "array"
+          },
+          {
+            "default": "[auto]",
+            "name": "exposed_ports",
+            "type": "generic"
+          },
+          {
+            "default": 0.01,
+            "name": "fsr",
+            "type": "float"
+          },
+          {
+            "default": 10.0,
+            "name": "heater_pad_length",
+            "type": "float"
+          },
+          {
+            "default": 0.6,
+            "name": "heater_width",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "insts",
+            "type": "generic"
+          },
+          {
+            "default": 0.0,
+            "name": "phase_error_correlation_length",
+            "type": "float"
+          },
+          {
+            "default": 0.0,
+            "name": "phase_error_width_deviation",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "specs",
+            "type": "array"
+          },
+          {
+            "default": {
+              "data": "true",
+              "encoding": "json"
+            },
+            "name": "strict",
+            "type": "generic"
+          }
+        ],
+        "parametersPerView": {
+          "CircuitModelView": [],
+          "LayoutView": [],
+          "NetlistView": [],
+          "PCell": [
+            "insts",
+            "specs",
+            "exposed_ports",
+            "strict",
+            "directional_couplers",
+            "heater_pad_length",
+            "heater_width",
+            "center_wavelength",
+            "phase_error_width_deviation",
+            "phase_error_correlation_length",
+            "fsr"
+          ]
+        },
+        "terms": [
+          {
+            "domain": "OpticalDomain",
+            "name": "out1",
+            "position": [
+              87.5,
+              -12.500000000000002
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out2",
+            "position": [
+              87.5,
+              12.499999999999996
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "in1",
+            "position": [
+              -87.5,
+              -12.500000000000002
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "in2",
+            "position": [
+              -87.5,
+              12.499999999999996
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "ht_in0",
+            "position": [
+              -61.24999999999999,
+              37.5
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "ht_out0",
+            "position": [
+              -43.75,
+              37.5
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "ht_in1",
+            "position": [
+              -26.25,
+              37.5
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "ht_out1",
+            "position": [
+              -8.75,
+              37.5
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "ht_in2",
+            "position": [
+              8.75,
+              37.5
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "ht_out2",
+            "position": [
+              26.25,
+              37.5
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "ht_in3",
+            "position": [
+              43.75,
+              37.5
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "ht_out3",
+            "position": [
+              61.24999999999999,
+              37.5
+            ]
+          }
+        ],
+        "width": 175
+      }
+    },
+    "PPCUnit": {
+      "symbol": {
+        "image": "Default",
+        "parameters": [
+          {
+            "default": 50.0,
+            "name": "bend_radius",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "dc",
+            "type": "generic"
+          },
+          {
+            "default": "[auto]",
+            "name": "exposed_ports",
+            "type": "generic"
+          },
+          {
+            "default": "[auto]",
+            "name": "heater",
+            "type": "generic"
+          },
+          {
+            "default": "[auto]",
+            "name": "insts",
+            "type": "generic"
+          },
+          {
+            "default": "[auto]",
+            "name": "specs",
+            "type": "array"
+          },
+          {
+            "default": {
+              "data": "true",
+              "encoding": "json"
+            },
+            "name": "strict",
+            "type": "generic"
+          },
+          {
+            "default": 0.0,
+            "name": "two_arm_length_difference",
+            "type": "float"
+          },
+          {
+            "default": 0.0,
+            "name": "v_bias_dc",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "waveguide",
+            "type": "generic"
+          },
+          {
+            "default": 10.0,
+            "name": "wg_buffer_dx",
+            "type": "float"
+          }
+        ],
+        "parametersPerView": {
+          "CircuitModelView": [],
+          "LayoutView": [],
+          "NetlistView": [],
+          "PCell": [
+            "insts",
+            "specs",
+            "exposed_ports",
+            "strict",
+            "dc",
+            "heater",
+            "waveguide",
+            "wg_buffer_dx",
+            "two_arm_length_difference",
+            "bend_radius",
+            "v_bias_dc"
+          ]
+        },
+        "terms": [
+          {
+            "domain": "OpticalDomain",
+            "name": "out1",
+            "position": [
+              50.0,
+              -8.333333333333334
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out2",
+            "position": [
+              50.0,
+              8.333333333333332
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "in1",
+            "position": [
+              -50.0,
+              -8.333333333333334
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "in2",
+            "position": [
+              -50.0,
+              8.333333333333332
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "ht1",
+            "position": [
+              -16.666666666666668,
+              25.0
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "ht2",
+            "position": [
+              16.666666666666664,
+              25.0
+            ]
+          }
+        ]
+      }
+    },
+    "RoutedSplitterTree": {
+      "symbol": {
+        "height": 115,
+        "image": "Default",
+        "parameters": [
+          {
+            "default": 5.0,
+            "name": "bend_radius",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "exposed_ports",
+            "type": "generic"
+          },
+          {
+            "default": "[auto]",
+            "name": "gc",
+            "type": "generic"
+          },
+          {
+            "default": "[auto]",
+            "name": "insts",
+            "type": "generic"
+          },
+          {
+            "default": 300.0,
+            "name": "length_of_in_wg",
+            "type": "float"
+          },
+          {
+            "default": 300.0,
+            "name": "length_of_out_wg",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "specs",
+            "type": "array"
+          },
+          {
+            "default": "[auto]",
+            "name": "splitter_tree",
+            "type": "generic"
+          },
+          {
+            "default": {
+              "data": "true",
+              "encoding": "json"
+            },
+            "name": "strict",
+            "type": "generic"
+          }
+        ],
+        "parametersPerView": {
+          "CircuitModelView": [],
+          "LayoutView": [],
+          "NetlistView": [],
+          "PCell": [
+            "insts",
+            "specs",
+            "exposed_ports",
+            "strict",
+            "splitter_tree",
+            "gc",
+            "length_of_out_wg",
+            "length_of_in_wg",
+            "bend_radius"
+          ]
+        },
+        "terms": [
+          {
+            "domain": "OpticalDomain",
+            "name": "out1",
+            "position": [
+              50.0,
+              -44.72222222222222
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out2",
+            "position": [
+              50.0,
+              -31.944444444444446
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out3",
+            "position": [
+              50.0,
+              -19.166666666666668
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out4",
+            "position": [
+              50.0,
+              -6.388888888888892
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out5",
+            "position": [
+              50.0,
+              6.388888888888892
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out6",
+            "position": [
+              50.0,
+              19.16666666666666
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out7",
+            "position": [
+              50.0,
+              31.944444444444446
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out8",
+            "position": [
+              50.0,
+              44.722222222222214
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "in",
+            "position": [
+              -50.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    },
+    "SplitterTree": {
+      "symbol": {
+        "height": 115,
+        "image": "DEMUX",
+        "parameters": [
+          {
+            "default": "[auto]",
+            "name": "bend_radius",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "exposed_ports",
+            "type": "generic"
+          },
+          {
+            "default": "[auto]",
+            "name": "insts",
+            "type": "generic"
+          },
+          {
+            "default": 3,
+            "name": "levels",
+            "type": "int"
+          },
+          {
+            "default": 100.0,
+            "name": "spacing_x",
+            "type": "float"
+          },
+          {
+            "default": 50.0,
+            "name": "spacing_y",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "specs",
+            "type": "array"
+          },
+          {
+            "default": "[auto]",
+            "name": "splitter",
+            "type": "generic"
+          },
+          {
+            "default": {
+              "data": "true",
+              "encoding": "json"
+            },
+            "name": "strict",
+            "type": "generic"
+          }
+        ],
+        "parametersPerView": {
+          "CircuitModelView": [],
+          "LayoutView": [],
+          "NetlistView": [],
+          "PCell": [
+            "insts",
+            "specs",
+            "exposed_ports",
+            "strict",
+            "splitter",
+            "levels",
+            "spacing_x",
+            "spacing_y",
+            "bend_radius"
+          ]
+        },
+        "terms": [
+          {
+            "domain": "OpticalDomain",
+            "name": "out1",
+            "position": [
+              50.0,
+              -44.72222222222222
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out2",
+            "position": [
+              50.0,
+              -31.944444444444446
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out3",
+            "position": [
+              50.0,
+              -19.166666666666668
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out4",
+            "position": [
+              50.0,
+              -6.388888888888892
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out5",
+            "position": [
+              50.0,
+              6.388888888888892
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out6",
+            "position": [
+              50.0,
+              19.16666666666666
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out7",
+            "position": [
+              50.0,
+              31.944444444444446
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out8",
+            "position": [
+              50.0,
+              44.722222222222214
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "in",
+            "position": [
+              -50.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    },
+    "TunableDelayLine": {
+      "symbol": {
+        "image": "Default",
+        "parameters": [
+          {
+            "default": 2.1,
+            "name": "delay_time",
+            "type": "float"
+          },
+          {
+            "default": "[auto]",
+            "name": "exposed_ports",
+            "type": "generic"
+          },
+          {
+            "default": "[auto]",
+            "name": "insts",
+            "type": "generic"
+          },
+          {
+            "default": 13,
+            "name": "n_o_loops",
+            "type": "int"
+          },
+          {
+            "default": "[auto]",
+            "name": "specs",
+            "type": "array"
+          },
+          {
+            "default": {
+              "data": "true",
+              "encoding": "json"
+            },
+            "name": "strict",
+            "type": "generic"
+          },
+          {
+            "default": 1.55,
+            "name": "target_wavelength",
+            "type": "float"
+          },
+          {
+            "default": 875.0,
+            "name": "x_distance_spiral",
+            "type": "float"
+          }
+        ],
+        "parametersPerView": {
+          "CircuitModelView": [],
+          "LayoutView": [],
+          "NetlistView": [],
+          "PCell": [
+            "insts",
+            "specs",
+            "exposed_ports",
+            "strict",
+            "delay_time",
+            "target_wavelength",
+            "x_distance_spiral",
+            "n_o_loops"
+          ]
+        },
+        "terms": [
+          {
+            "domain": "OpticalDomain",
+            "name": "out1",
+            "position": [
+              75.0,
+              -8.333333333333334
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "out2",
+            "position": [
+              75.0,
+              8.333333333333332
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "in1",
+            "position": [
+              -75.0,
+              -8.333333333333334
+            ]
+          },
+          {
+            "domain": "OpticalDomain",
+            "name": "in2",
+            "position": [
+              -75.0,
+              8.333333333333332
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "elec11",
+            "position": [
+              -58.333333333333336,
+              -25.0
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "elec12",
+            "position": [
+              -41.66666666666667,
+              -25.0
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "elec21",
+            "position": [
+              -25.000000000000004,
+              -25.0
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "elec22",
+            "position": [
+              -8.333333333333337,
+              -25.0
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "elec31",
+            "position": [
+              8.333333333333337,
+              -25.0
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "elec32",
+            "position": [
+              24.999999999999993,
+              -25.0
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "elec41",
+            "position": [
+              41.66666666666667,
+              -25.0
+            ]
+          },
+          {
+            "domain": "ElectricalDomain",
+            "name": "elec42",
+            "position": [
+              58.33333333333333,
+              -25.0
+            ]
+          }
+        ],
+        "width": 150
+      }
+    }
+  },
+  "name": "pteam_library_si_fab",
+  "version": 7
+}

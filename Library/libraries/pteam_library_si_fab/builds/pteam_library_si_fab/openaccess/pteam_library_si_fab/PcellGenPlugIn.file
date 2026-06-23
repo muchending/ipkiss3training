@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<PcellGen>
+	<Platform name="Win32">
+		<PlugIn name="GenPCell_v3" lib="GenPCell_v3"/>
+		<PlugIn name="GenPCell_v2" lib="GenPCell_v2"/>
+	</Platform>
+	<Platform name="linux_64 ">
+		<PlugIn name="GenPCell_v3" lib="GenPCell_v3_linux"/>
+		<PlugIn name="GenPCell_v2" lib="GenPCell_v2_linux"/>
+	</Platform>
+</PcellGen>

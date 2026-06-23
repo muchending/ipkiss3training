@@ -1,0 +1,13 @@
+pteam_library_si_fab:
+  components:
+    DirectionalCouplerDC2: pteam_library_si_fab.components.directional_dc2.pcell.cell
+    MZI: pteam_library_si_fab.components.mzi.pcell.cell
+    MZModulator: pteam_library_si_fab.components.mzm.pcell.cell
+    Mux2: pteam_library_si_fab.components.mux2.pcell.mux2
+    Mux2Heated: pteam_library_si_fab.components.heated_mux2.pcell.mux2_heated
+    PPCUnit: pteam_library_si_fab.components.ppc_unit.pcell.cell
+    RoutedSplitterTree: pteam_library_si_fab.components.splitter_tree.cell
+    SplitterTree: pteam_library_si_fab.components.splitter_tree.cell
+    TunableDelayLine: pteam_library_si_fab.components.tunable_delay.pcell.cell
+  technology: pteam_library_si_fab.technology
+  templates: {}

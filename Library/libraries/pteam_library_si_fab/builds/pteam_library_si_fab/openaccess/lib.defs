@@ -1,0 +1,2 @@
+DEFINE pteam_library_si_fab pteam_library_si_fab
+ASSIGN pteam_library_si_fab libMode shared

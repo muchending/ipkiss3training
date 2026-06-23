@@ -1,0 +1,7 @@
+schema_version = "1"
+name = "Config for pteam_library_si_fab.py"
+version = "0.1"
+build_date = 2026-05-29
+type = "PDK"
+build_ipkiss_version = "2026.06.0rc1"
+description = "Exported library"
