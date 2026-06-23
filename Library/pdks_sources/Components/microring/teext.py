@@ -36,8 +36,9 @@ lv_layout=lv.Layout(shape=i3.ShapeArc(
                     center=(0,0),
                 ))
 
-lv_layout.visualize()
-print(1)
+# lv_layout.visualize()
+nt=lv.Netlist()
+print(nt.netlist)
 
 
 

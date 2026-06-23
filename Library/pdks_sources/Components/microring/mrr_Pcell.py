@@ -105,8 +105,17 @@ class  microring(i3.PCell):
 
             return layout
 
-    class Netlist(i3.NetlistFromLayout):
-        pass
+    class Netlist(i3.NetlistView):
+        def _generate_netlist(self, netlist):
+            netlist += i3.OpticalTerm(name="input")
+            netlist += i3.OpticalTerm(name="through")
+            netlist += i3.OpticalTerm(name="drop")
+            netlist += i3.OpticalTerm(name="add")
+
+            netlist += i3.ElectricalTerm(name="elec1")
+            netlist += i3.ElectricalTerm(name="elec2")
+
+            return netlist
 
     class CircuitModel(i3.CircuitModelView):
 
