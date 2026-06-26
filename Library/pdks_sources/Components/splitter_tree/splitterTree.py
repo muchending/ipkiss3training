@@ -1,3 +1,4 @@
+import numpy as np
 
 from Components import all as my_pdks
 # Copyright (C) 2020-2025 Luceda Photonics
@@ -90,6 +91,12 @@ if __name__ == "__main__":
     splitter_tree = GeneralizedSplitterTree(n_levels=3)
     splitter_tree_layout = splitter_tree.Layout()
     splitter_tree_layout.visualize(annotate=False)
+    spt_ml=splitter_tree.CircuitModel()
+    wavelength_range=np.linspace(1.52,1.55,101
+                                 )
+    spt_ml.get_smatrix(wavelength_range).visualize(
+        term_pairs=[("in","out1"), ("in","out2")],
+    )
     # splitter_tree_layout.write_gdsii("generalized_splitter_tree.gds")
 
 

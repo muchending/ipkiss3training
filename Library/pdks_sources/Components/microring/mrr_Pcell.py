@@ -1,4 +1,4 @@
-from setuptools.namespaces import flatten
+
 from si_fab import all as pdk
 from ipkiss3 import all as i3
 import numpy as np  # useful numerical package
@@ -7,6 +7,8 @@ import Components.HeatedWaveguide.hw_pcell as ht
 import Components.microring.mrr_model as mm
 
 import os
+
+from Components.microring import mrr_model
 
 
 class  microring(i3.PCell):
@@ -60,6 +62,8 @@ class  microring(i3.PCell):
             )
 
             layout+=heated_ring_layout.elements
+            # layout += heated_ring_layout.instances
+
             layout+=[i3.CirclePath(
                 layer=core_layer,
                 center=(0.5 * bus_length, radius + gap+bus_width+0.1),
@@ -103,6 +107,7 @@ class  microring(i3.PCell):
             layout += heated_ring_layout.ports["elec1"].modified_copy(name="elec1")
             layout += heated_ring_layout.ports["elec2"].modified_copy(name="elec2")
 
+
             return layout
 
     class Netlist(i3.NetlistView):
@@ -111,10 +116,8 @@ class  microring(i3.PCell):
             netlist += i3.OpticalTerm(name="through")
             netlist += i3.OpticalTerm(name="drop")
             netlist += i3.OpticalTerm(name="add")
-
             netlist += i3.ElectricalTerm(name="elec1")
             netlist += i3.ElectricalTerm(name="elec2")
-
             return netlist
 
     class CircuitModel(i3.CircuitModelView):
@@ -175,4 +178,27 @@ class  microring(i3.PCell):
                                 reflection_in2=self.reflection_in2,
                                 reflection_out1=self.reflection_out1,
                                 reflection_out2=self.reflection_out2,)
+if __name__ == "__main__":
+    mrr=microring()
+    mrr_lv=mrr.Layout()
+    # acute_angle_points=[angle_point[0] for angle_point in acute_angle_collection[pdk.TECH.PPLAYER.M1]]
+    # stub_elems=[
+    #     i3.Circle(layer=pdk.TECH.PPLAYER.M1,center=acute_angle_point,radius=1)
+    #             for acute_angle_point in acute_angle_points
+    #             ]
+    # stubs_lay =i3.LayoutCell(name="stub_elems").Layout(elements=stub_elems)
+    # stubs_lay.visualize()
+    # layout_elements=i3.get_layer_elements(mrr_lv)
+    # layers=list(set([el.layer for el in layout_elements]))
+    # stubbed_elements = i3.merge_elements(layout_elements+stub_elems,layers=layers)
+    #
+    # stubbed_layout = i3.LayoutCell(name="stubbed_layout").Layout(elements=stubbed_elements,ports=mrr_lv.ports)
+    # stubbed_layout.visualize()
+    # mrr_lv.visualize_violations(overlap_layers=[pdk.TECH.PPLAYER.SI])
+    """to fix the acute angles """
+    elems_add,elems_subt=i3.get_stub_elements(layout=mrr_lv,layers=[pdk.TECH.PPLAYER.M1],stub_width=0.1,grow_amount=0.1)
+    mrr.Layout(elements=i3.subtract_elements(mrr_lv.layout,elems_subt,[pdk.TECH.PPLAYER.M1]))
+    elems_add, elems_subt = i3.get_stub_elements(layout=mrr_lv, layers=[pdk.TECH.PPLAYER.HT], stub_width=0.1,
+                                                 grow_amount=0.1)
+    mrr.Layout(elements=i3.subtract_elements(mrr_lv.layout, elems_subt, [pdk.TECH.PPLAYER.HT])).visualize_violations(overlap_layers=[pdk.TECH.PPLAYER.SI])
 

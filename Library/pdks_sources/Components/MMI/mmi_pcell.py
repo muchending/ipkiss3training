@@ -27,7 +27,7 @@ class MMI1muti2(i3.PCell):
 
 
 
-    class layout(i3.LayoutView):
+    class Layout(i3.LayoutView):
         def generate(self,layout):
             length = self.length
             width = self.width
@@ -98,6 +98,9 @@ class MMI1muti2(i3.PCell):
         pass
     class CircuitModel(i3.CircuitModelView):
 
+
+
+
         center_wavelength = i3.PositiveNumberProperty(doc="center_wavelength")
         transmission = i3.NumpyArrayProperty(doc="Polynomial coefficients for the transmission")
         reflection_in = i3.NumpyArrayProperty(doc="Polynomial coefficients for the reflection_in")
@@ -132,7 +135,7 @@ class MMI1muti2(i3.PCell):
             return np.array([0.01])
 
 
-        def generate_model(self):
+        def _generate_model(self):
             return md.MMI1muti2model(center_wavelength=self.center_wavelength,
                                       transmission=self.transmission,
                                       reflection_in=self.reflection_in,
