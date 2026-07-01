@@ -2,6 +2,7 @@ from si_fab import all as pdk
 from ipkiss3 import all as i3
 import numpy as np  # useful numerical package
 import json
+import os
 
 
 import Components.MMI.mmi_model as md
@@ -107,7 +108,8 @@ class MMI1muti2(i3.PCell):
         reflection_out = i3.NumpyArrayProperty(doc="Polynomial coefficients for the reflection_out")
         data_file=i3.StringProperty(doc="多项式系数")
         def _default_data_file(self):
-            return "mmi_1550.json"
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            return os.path.join(script_dir, "mmi_1550.json")
         def get_data(self,data_file=None):
             if data_file is None:
                 data_file = self.data_file
@@ -140,6 +142,7 @@ class MMI1muti2(i3.PCell):
                                       transmission=self.transmission,
                                       reflection_in=self.reflection_in,
                                       reflection_out=self.reflection_out)
+
 
 
 

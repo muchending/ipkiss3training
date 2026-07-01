@@ -15,7 +15,7 @@ class  microring(i3.PCell):
     """A add_drop microring"""
     _name_prefix = "add_drop_microring"
     trace_template=i3.TraceTemplateProperty(doc="the template of access waveguide")
-    gap=i3.PositiveNumberProperty(default=0.3,doc="the coupling gap")
+    gap=i3.PositiveNumberProperty(default=1,doc="the coupling gap")
     radius=i3.FloatProperty(default=10,doc="the radius of the microring")
     bus_width=i3.PositiveNumberProperty(default=0.45,doc="the width of the bus waveguide")
     bus_length=i3.PositiveNumberProperty(default=0.1,doc="the length of the bus waveguide")
@@ -74,7 +74,7 @@ class  microring(i3.PCell):
 
             layout+=[i3.Rectangle(
                 layer=core_layer,
-                center=(0.5 * bus_length, gap+3*bus_width+2*radius),
+                center=(0.5 * bus_length, gap+3*bus_width+2*radius+0.1),
                 box_size=(bus_length, bus_width)
 
             )]
@@ -179,26 +179,74 @@ class  microring(i3.PCell):
                                 reflection_out1=self.reflection_out1,
                                 reflection_out2=self.reflection_out2,)
 if __name__ == "__main__":
-    mrr=microring()
-    mrr_lv=mrr.Layout()
-    # acute_angle_points=[angle_point[0] for angle_point in acute_angle_collection[pdk.TECH.PPLAYER.M1]]
-    # stub_elems=[
-    #     i3.Circle(layer=pdk.TECH.PPLAYER.M1,center=acute_angle_point,radius=1)
-    #             for acute_angle_point in acute_angle_points
-    #             ]
-    # stubs_lay =i3.LayoutCell(name="stub_elems").Layout(elements=stub_elems)
-    # stubs_lay.visualize()
-    # layout_elements=i3.get_layer_elements(mrr_lv)
-    # layers=list(set([el.layer for el in layout_elements]))
-    # stubbed_elements = i3.merge_elements(layout_elements+stub_elems,layers=layers)
-    #
-    # stubbed_layout = i3.LayoutCell(name="stubbed_layout").Layout(elements=stubbed_elements,ports=mrr_lv.ports)
-    # stubbed_layout.visualize()
-    # mrr_lv.visualize_violations(overlap_layers=[pdk.TECH.PPLAYER.SI])
-    """to fix the acute angles """
-    elems_add,elems_subt=i3.get_stub_elements(layout=mrr_lv,layers=[pdk.TECH.PPLAYER.M1],stub_width=0.1,grow_amount=0.1)
-    mrr.Layout(elements=i3.subtract_elements(mrr_lv.layout,elems_subt,[pdk.TECH.PPLAYER.M1]))
-    elems_add, elems_subt = i3.get_stub_elements(layout=mrr_lv, layers=[pdk.TECH.PPLAYER.HT], stub_width=0.1,
-                                                 grow_amount=0.1)
-    mrr.Layout(elements=i3.subtract_elements(mrr_lv.layout, elems_subt, [pdk.TECH.PPLAYER.HT])).visualize_violations(overlap_layers=[pdk.TECH.PPLAYER.SI])
+    # mrr=microring()
+    # mrr_lv=mrr.Layout()
+    # """"to fix the acute angles """
+    # elems_add,elems_subt=i3.get_stub_elements(layout=mrr_lv,layers=[pdk.TECH.PPLAYER.M1],stub_width=0.1,grow_amount=0.1)
+    # mrr.Layout(elements=i3.subtract_elements(mrr_lv.layout,elems_subt,[pdk.TECH.PPLAYER.M1]))
+    # elems_add, elems_subt = i3.get_stub_elements(layout=mrr_lv, layers=[pdk.TECH.PPLAYER.HT], stub_width=0.1,
+    #                                              grow_amount=0.1)
+    # mrr.Layout(elements=i3.subtract_elements(mrr_lv.layout, elems_subt, [pdk.TECH.PPLAYER.HT])).visualize_violations(overlap_layers=[pdk.TECH.PPLAYER.SI])
+    if __name__ == "__main__":
+
+        mrr = microring()
+
+        print("========== 1. Check Layout ==========")
+        lv = mrr.Layout()
+        lv.visualize()
+        print("Layout ports:")
+        for pname, p in lv.ports.items():
+            print("  ", pname, type(p))
+
+        print("\n========== 2. Check Netlist ==========")
+        nl = mrr.Netlist()
+        print("Netlist terms:")
+        for tname, t in nl.terms.items():
+            print("  ", tname, type(t))
+
+        print("\n========== 3. Check CircuitModel View ==========")
+        cm = mrr.CircuitModel()
+        print("CircuitModel view created successfully.")
+
+        print("center_wavelength =", cm.center_wavelength)
+        print("through_response shape =", cm.through_response.shape)
+        print("drop_response shape =", cm.drop_response.shape)
+
+        print("\n========== 4. Generate compact model ==========")
+        model = cm.model
+        print("Compact model generated successfully:")
+        print(model)
+
+        print("\n========== 5. Check model terms / ports ==========")
+        if hasattr(model, "terms"):
+            print("Model terms:")
+            for t in model.terms:
+                print("  ", t)
+        elif hasattr(model, "ports"):
+            print("Model ports:")
+            for p in model.ports:
+                print("  ", p)
+        else:
+            print("Warning: model has no visible terms/ports attribute.")
+
+        print("\n========== 6. Try S-parameter calculation ==========")
+
+        wavelengths = np.linspace(1.50, 1.60, 101)
+
+        try:
+            S = cm.get_smatrix(wavelengths=wavelengths)
+            print("S-matrix calculation succeeded.")
+            print("Available S-parameters:")
+
+            for key in S.keys():
+                print("  ", key)
+
+            print("\nExample:")
+            print("S[input, through] at first wavelength =")
+            print(S["input", "through"][0])
+
+        except Exception as e:
+            print("S-matrix calculation failed.")
+            print(type(e).__name__)
+            print(e)
 

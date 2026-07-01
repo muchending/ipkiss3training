@@ -7,6 +7,8 @@ from si_fab import all as pdk
 class heatedringwaveguide(pdk.HeatedWaveguide):
     metal_angle_separation = i3.NumberProperty(default=180,
                                                 doc="Angular separation between two metal contacts in degrees.")
+    heater_width = i3.NumberProperty(default=0.8,)
+    heater_offset = i3.NumberProperty(default=1.4,)
     class Layout(pdk.HeatedWaveguide.Layout):
         def _point_at_length(self, shape, target_length):
             pts = list(shape)
@@ -36,7 +38,7 @@ class heatedringwaveguide(pdk.HeatedWaveguide):
 
         def _generate_elements(self, elems):
             metal_angle_separation=self.metal_angle_separation
-            elems=super(pdk.HeatedWaveguide.Layout, self)._generate_elements(elems)
+            elems=super(pdk.HeatedWaveguide.Layout,self)._generate_elements(elems)
 
             metal_angle_separation = self.cell.metal_angle_separation
 
@@ -93,7 +95,7 @@ class heatedringwaveguide(pdk.HeatedWaveguide):
             return elems
 
         def _generate_ports(self, ports):
-            ports = super(pdk.HeatedWaveguide.Layout, self)._generate_ports(ports)
+            # ports = super()._generate_ports(ports)
 
             center_line = self.center_line_shape
             total_length = center_line.length()

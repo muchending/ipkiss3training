@@ -86,14 +86,14 @@ class MRRArrayCircuit(i3.Circuit):
             i3.Place("mrr8", (1.75 * sx, 0.4 * sy), relative_to="sp_tree:out5"),
 
             # Splitter-to-MRR optical routing.
-            i3.ConnectManhattan("sp_tree:out1", "mrr1:input", control_points=[(240, -140)]),
-            i3.ConnectManhattan("sp_tree:out2", "mrr2:input"),
-            i3.ConnectManhattan("sp_tree:out3", "mrr3:input"),
-            i3.ConnectManhattan("sp_tree:out4", "mrr4:input"),
-            i3.ConnectManhattan("sp_tree:out5", "mrr8:input"),
-            i3.ConnectManhattan("sp_tree:out6", "mrr7:input"),
-            i3.ConnectManhattan("sp_tree:out7", "mrr6:input"),
-            i3.ConnectManhattan("sp_tree:out8", "mrr5:input", control_points=[(240, 140)]),
+            i3.ConnectManhattan("sp_tree:out1", "mrr1:input", control_points=[(240, -140)],bend_radius=10,cover_bends=True),
+            i3.ConnectManhattan("sp_tree:out2", "mrr2:input",bend_radius=10,cover_bends=True),
+            i3.ConnectManhattan("sp_tree:out3", "mrr3:input",bend_radius=10,cover_bends=True),
+            i3.ConnectManhattan("sp_tree:out4", "mrr4:input",bend_radius=10,cover_bends=True),
+            i3.ConnectManhattan("sp_tree:out5", "mrr8:input",bend_radius=10,cover_bends=True),
+            i3.ConnectManhattan("sp_tree:out6", "mrr7:input",bend_radius=10,cover_bends=True),
+            i3.ConnectManhattan("sp_tree:out7", "mrr6:input",bend_radius=10,cover_bends=True),
+            i3.ConnectManhattan("sp_tree:out8", "mrr5:input", control_points=[(240, 140)],bend_radius=10,cover_bends=True),
         ]
 
     def _gc_specs(self):
@@ -111,15 +111,15 @@ class MRRArrayCircuit(i3.Circuit):
             i3.Place("gc_out8", (0, 400), relative_to="gc_out7", angle=180),
 
             # Optical routing.
-            i3.ConnectManhattan("gc_in:out", "sp_tree:in"),
-            i3.ConnectManhattan("gc_out1:out", "mrr1:through"),
-            i3.ConnectManhattan("gc_out2:out", "mrr2:through"),
-            i3.ConnectManhattan("gc_out3:out", "mrr3:through"),
-            i3.ConnectManhattan("gc_out4:out", "mrr4:through"),
-            i3.ConnectManhattan("gc_out5:out", "mrr8:through"),
-            i3.ConnectManhattan("gc_out6:out", "mrr7:through"),
-            i3.ConnectManhattan("gc_out7:out", "mrr6:through"),
-            i3.ConnectManhattan("gc_out8:out", "mrr5:through"),
+            i3.ConnectManhattan("gc_in:out", "sp_tree:in",bend_radius=10,cover_bends=True),
+            i3.ConnectManhattan("gc_out1:out", "mrr1:through",bend_radius=10,cover_bends=True),
+            i3.ConnectManhattan("gc_out2:out", "mrr2:through",bend_radius=10,cover_bends=True),
+            i3.ConnectManhattan("gc_out3:out", "mrr3:through",bend_radius=10,cover_bends=True),
+            i3.ConnectManhattan("gc_out4:out", "mrr4:through",bend_radius=10,cover_bends=True),
+            i3.ConnectManhattan("gc_out5:out", "mrr8:through",bend_radius=10,cover_bends=True),
+            i3.ConnectManhattan("gc_out6:out", "mrr7:through",bend_radius=10,cover_bends=True),
+            i3.ConnectManhattan("gc_out7:out", "mrr6:through",bend_radius=10,cover_bends=True),
+            i3.ConnectManhattan("gc_out8:out", "mrr5:through",bend_radius=10,cover_bends=True),
         ]
 
     def _pad_specs(self):
@@ -178,6 +178,8 @@ class MRRArrayCircuit(i3.Circuit):
             exposed_ports[f"gc_out{idx}:vertical_in"] = f"opt_out{idx}"
             exposed_ports[f"pad{idx}:m1"] = f"elec_pad{idx}"
             exposed_ports[f"pad_{idx}:m1"] = f"elec_pad_{idx}"
+            exposed_ports[f"mrr{idx}:drop"] = f"mrr{idx}_drop"
+            exposed_ports[f"mrr{idx}:add"] = f"mrr{idx}_add"
 
         return exposed_ports
 
@@ -193,7 +195,7 @@ if __name__ == "__main__":
     ROOT = Path(__file__).resolve().parents[4]
     PORT_DIR = ROOT / "tape_out" / "port"
     PORT_DIR.mkdir(parents=True, exist_ok=True)
-    with open(ROOT/"top_level_ports.csv", "w", newline="", encoding="utf-8") as f:
+    with open(ROOT/"MrrAarry.csv", "w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
             writer.writerow(["Port", "X(um)", "Y(um)"])
 
@@ -211,6 +213,6 @@ if __name__ == "__main__":
     # circuit_layout.write_gdsii("mrr_array_circuit.gds")
 
     # Optional circuit simulation.
-    # circuit_model = circuit.CircuitModel()
-    # wavelengths = np.linspace(1.5, 1.6, 501)
-    # circuit_model.get_smatrix(wavelengths=wavelengths).visualize()
+    circuit_model = circuit.CircuitModel()
+    wavelengths = np.linspace(1.5, 1.6, 501)
+    circuit_model.get_smatrix(wavelengths=wavelengths).visualize()

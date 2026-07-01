@@ -18,6 +18,8 @@ class mrr_model(i3.CompactModel):
                  i3.OpticalTerm(name="through"),
                  i3.OpticalTerm(name="add"),
                  i3.OpticalTerm(name="drop"),
+                 i3.ElectricalTerm(name="elec1"),
+                 i3.ElectricalTerm(name="elec2"),
         ]
         def calculate_smatrix(parameters,env,S):
             through_response = np.polyval(parameters.through_response,env.wavelength-parameters.center_wavelength)
